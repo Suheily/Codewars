@@ -1,3 +1,20 @@
+// Level: 7 Kyu
+
+// Binary Addition
+// Date: 5/19
+// Instructions: Implement a function that adds two numbers together and returns their sum in binary.
+// The conversion can be done before, or after the addition. The binary number returned should be a string.
+// Examples:(Input1, Input2 --> Output (explanation)))
+// 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+// 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+
+function addBinary(a,b) {
+  let sum = a + b
+  
+  return sum.toString(2)
+}
+
+
 // Level: 6 Kyu
 
 // Does My Number Look Big in This?
@@ -28,6 +45,7 @@ function narcissistic(value) {
   }
   
   let echo = pond.reduce((a,b) => a + b, 0)
+  
   if( echo === value){
       return true
     } else {
@@ -73,6 +91,7 @@ function expandedForm(num) {
 function findOutlier(integers){
   let odd = []
   let even = []
+  
   for(let i = 0; i < integers.length; i++){
     if(integers[i] %2){
       even.push(integers[i])
@@ -80,6 +99,7 @@ function findOutlier(integers){
       odd.push(integers[i])
     }  
   }
+  
   if(even.length === 1){
     return even[0]
   } else {
