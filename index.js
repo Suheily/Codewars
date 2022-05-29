@@ -16,8 +16,7 @@
 
 var beeramid = function(bonus, price) {
   let levels = 0
-  let cansSum = 0
-  cansSum = Math.trunc(bonus/price)
+  let cansSum = Math.trunc(bonus/price)
   
   while(cansSum >= (levels + 1)**2){
     levels += 1
