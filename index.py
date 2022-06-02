@@ -1,3 +1,74 @@
+#  Level: 4 Kyu
+
+#  The Observed Pin
+#  Date: 6/2
+#  Instructions: Alright, detective, one of our colleagues successfully observed our target person, Robby the
+#  robber. We followed him to a secret warehouse, where we assume to find all the stolen stuff. The door to this
+#  warehouse is secured by an electronic combination lock. Unfortunately our spy isn't sure about the PIN he saw, 
+#  when Robby entered it. The keypad has the following layout:
+#  ┌───┬───┬───┐
+#  │ 1 │ 2 │ 3 │
+#  ├───┼───┼───┤
+#  │ 4 │ 5 │ 6 │
+#  ├───┼───┼───┤
+#  │ 7 │ 8 │ 9 │
+#  └───┼───┼───┘
+#      │ 0 │
+#      └───┘
+#  He noted the PIN 1357, but he also said, it is possible that each of the digits he saw could actually be another 
+#  adjacent digit (horizontally or vertically, but not diagonally). E.g. instead of the 1 it could also be the 2 or
+#  4. And instead of the 5 it could also be the 2, 4, 6 or 8. He also mentioned, he knows this kind of locks. You can 
+#  enter an unlimited amount of wrong PINs, they never finally lock the system or sound the alarm. That's why we can try 
+#  out all possible (*) variations. 
+#  * possible in sense of: the observed PIN itself and all variations considering the adjacent digits
+#  Can you help us to find all those variations? It would be nice to have a function, that returns an array (or a list in
+#  Java/Kotlin and C#) of all variations for an observed PIN with a length of 1 to 8 digits. We could name the function 
+#  getPINs (get_pins in python, GetPINs in C#). But please note that all PINs, the observed one and also the results, must 
+#  be strings, because of potentially leading '0's. We already prepared some test cases for you. Detective, we are counting
+#  on you!
+
+# WITHOUT itertools
+
+neighbors = {
+        "1":["2","4"], 
+        "2":["3","5","1"], 
+        "3":["2","6"], 
+        "4":["1","5","7"], 
+        "5":["2","6","8","4"],
+        "6":["3","5","9"],
+        "7":["4","8"],
+        "8":["5","9","0","7"],
+        "9":["6","8"],
+        "0":["8"]
+        }
+
+def get_pins(observed):
+    if len(observed) == 1:
+        return neighbors[observed] + [observed]
+    return [i + j for i in neighbors[observed[0]] + [observed[0]] for j in get_pins(observed[1:])]
+
+# WITH itertools
+
+import itertools
+
+neighbors = {
+        "1":["1","2","4"], 
+        "2":["2","3","5","1"], 
+        "3":["3","2","6"], 
+        "4":["4","1","5","7"], 
+        "5":["5","2","6","8","4"],
+        "6":["6","3","5","9"],
+        "7":["7","4","8"],
+        "8":["8","5","9","0","7"],
+        "9":["9","6","8"],
+        "0":["0","8"]
+        }
+
+def get_pins(observed):
+    pins = [neighbors[i] for i in observed]
+    return (["".join(neighbors) for neighbors in itertools.product(*pins)])
+
+
 #  Level: 6 Kyu
 
 #  Delete Occurrences Of An Element If It Occurs More Than N Times
@@ -70,7 +141,8 @@ def beeramid(bonus, price):
 
 #  Snail Sort
 #  Date: 5/28
-#  Instructions: Given an n x n array, return the array elements arranged from outermost elements to the middle element, traveling clockwise.
+#  Instructions: Given an n x n array, return the array elements arranged from outermost elements to the middle element, 
+#  traveling clockwise.
 #  array = [[1,2,3],
 #          [4,5,6],
 #          [7,8,9]]
@@ -80,7 +152,8 @@ def beeramid(bonus, price):
 #          [8,9,4],
 #          [7,6,5]]
 #  snail(array) #=> [1,2,3,4,5,6,7,8,9]
-#  NOTE: The idea is not sort the elements from the lowest value to the highest; the idea is to traverse the 2-d array in a clockwise snailshell pattern.
+#  NOTE: The idea is not sort the elements from the lowest value to the highest; the idea is to traverse the 2-d array in 
+#  a clockwise snailshell pattern.
 #  NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array [[]].
 
 def snail(snail_map):
