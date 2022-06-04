@@ -20,6 +20,7 @@ function divisors(integer) {
   return divisors.length <= 1? (integer + " is prime") : divisors
 }
 
+
 //  Level: 7 Kyu
 
 //  Money, Money, Money
