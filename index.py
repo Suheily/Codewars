@@ -20,6 +20,7 @@
 
 def stairs_in_20(stairs):
     estimate = 0
+    
     for day in stairs:
         for steps in day:
             estimate += steps
