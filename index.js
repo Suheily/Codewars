@@ -1,3 +1,42 @@
+//  Level: 6 Kyu
+
+//  Condensentences
+//  Date: 6/21
+//  Instructions: In this kata, you must condense a given string. Condensing a string means removing all spaces, and then also removing 
+//  any extra characters while making sure that all words of the original string are still contained in the same order. This is possible
+//  because words can overlap in the compressed string, allowing it to be much shorter. 
+//  Consider the following examples:
+//  condense("fat tat attack")
+//  + fat
+//  +   tat
+//  +    attack
+//  = fatattack 
+//  condense("pugs so cool")
+//  + pugs
+//  +    so
+//  +      cool
+//  = pugsocool
+//  condense("ladder adders")
+//  + ladder
+//  +  adders
+//  = ladders
+//  The function must work with numbers, words that can't be condensed and empty strings as well. The credit for this algorithm goes to a youtuber 
+//  by the name of The Daily Programmer.
+
+const condense = (str) =>{
+  str = str.split(" ")
+  
+  for (let i = 0; i < str.length - 1; i++){
+    for (let j = 0; j < str[i].length; j++){  
+      if (str[i + 1].startsWith(str[i].slice(j))){
+        str[i] = str[i].substring(0,j)  
+      }
+    }
+  }
+  return str.join("")
+}
+
+
 //  Level: 7 Kyu
 
 //  Filtering Lists
