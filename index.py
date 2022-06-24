@@ -1,3 +1,18 @@
+#  Level: 7 Kyu
+
+#  COnsecutive Items
+#  Date: 6/24
+#  Instructions: You are given a list of unique integers arr, and two integers a and b. Your task is to find out whether or not a
+#  and b appear consecutively in arr, and return a boolean value (True if a and b are consecutive, False otherwise). It is guaranteed 
+#  that a and b are both present in arr.
+
+def consecutive(arr, a, b):
+    for i in range(len(arr)-1):
+        if (arr[i] == a and arr[i + 1] == b) or (arr[i] == b and arr[i + 1] == a):
+            return True
+    return False
+
+
 #  Level: 8 Kyu
 
 #  Regular Ball Super Ball
