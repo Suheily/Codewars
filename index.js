@@ -1,5 +1,21 @@
 //  Level: 7 Kyu
 
+//  Truthy and Falsy
+//  Date: 6/26
+//  Instructions: In JavaScript there are truthy and falsy values. You are given two empty arrays (truthy and falsy) and you have to 
+//  fill this array with at least 5 elements in each which will evaluate to true or false accordingly.
+//  truthy: a value that when evaluated in a boolean context returns true
+//  falsy: a value that when evaluated in a boolean context returns false
+//  MDN links:
+//  https://developer.mozilla.org/en/docs/Glossary/Truthy
+//  https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+
+const truthy = [1,2,3,4,5]
+const falsy = [0,"", NaN, false, null]
+
+
+//  Level: 7 Kyu
+
 //  COnsecutive Items
 //  Date: 6/24
 //  Instructions: You are given a list of unique integers arr, and two integers a and b. Your task is to find out whether or not a
