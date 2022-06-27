@@ -1,5 +1,46 @@
 #  Level: 7 Kyu
 
+#  Baby Shark Lyrics Generator
+#  Date: 6/27
+#  Instructions: Create a function, as short as possible, that returns these lyrics. Your code should be less than 300 characters.
+#  Watch out for the three points at the end of the song.
+#  Baby shark, doo doo doo doo doo doo
+#  Baby shark, doo doo doo doo doo doo
+#  Baby shark, doo doo doo doo doo doo
+#  Baby shark!
+#  Mommy shark, doo doo doo doo doo doo
+#  Mommy shark, doo doo doo doo doo doo
+#  Mommy shark, doo doo doo doo doo doo
+#  Mommy shark!
+#  Daddy shark, doo doo doo doo doo doo
+#  Daddy shark, doo doo doo doo doo doo
+#  Daddy shark, doo doo doo doo doo doo
+#  Daddy shark!
+#  Grandma shark, doo doo doo doo doo doo
+#  Grandma shark, doo doo doo doo doo doo
+#  Grandma shark, doo doo doo doo doo doo
+#  Grandma shark!
+#  Grandpa shark, doo doo doo doo doo doo
+#  Grandpa shark, doo doo doo doo doo doo
+#  Grandpa shark, doo doo doo doo doo doo
+#  Grandpa shark!
+#  Let's go hunt, doo doo doo doo doo doo
+#  Let's go hunt, doo doo doo doo doo doo
+#  Let's go hunt, doo doo doo doo doo doo
+#  Let's go hunt!
+#  Run away,…
+
+def baby_shark_lyrics():
+    names = ["Baby shark","Mommy shark","Daddy shark","Grandma shark","Grandpa shark","Let's go hunt"]
+    lyrics = ""
+    
+    for i in names:
+        lyrics += ("{}, doo doo doo doo doo doo\n".format(i))*3 + "{}!\n".format(i) 
+    return lyrics + "Run away,…"
+
+
+#  Level: 7 Kyu
+
 #  COnsecutive Items
 #  Date: 6/24
 #  Instructions: You are given a list of unique integers arr, and two integers a and b. Your task is to find out whether or not a
