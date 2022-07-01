@@ -1,5 +1,20 @@
 //  Level: 8 Kyu
 
+//  Opposite Number
+//  Date: 7/1
+//  Instructions: Very simple, given an integer or a floating-point number, find its opposite.
+//  Examples:
+//  1: -1
+//  14: -14
+//  -34: 34
+
+function opposite(number) {
+  return -number
+}
+
+
+//  Level: 8 Kyu
+
 //  Rock, Paper, Scissors!
 //  Date: 6/30
 //  Instructions: Let's play! You have to return which player won! In case of a draw return Draw!.
