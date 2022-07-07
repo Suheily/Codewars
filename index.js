@@ -1,5 +1,29 @@
 //  Level: 8 Kyu
 
+//  CSV Representation of Array
+//  Date: 7/7
+//  Instructions: Create a function that returns the CSV representation of a two-dimensional numeric array.
+//  Example:
+//  Input:
+//    [[ 0, 1, 2, 3, 4 ],
+//     [ 10,11,12,13,14 ],
+//     [ 20,21,22,23,24 ],
+//     [ 30,31,32,33,34 ]] 
+//  Output:
+//      '0,1,2,3,4\n'
+//     +'10,11,12,13,14\n'
+//     +'20,21,22,23,24\n'
+//     +'30,31,32,33,34'
+//  Array's length > 2.
+//  More details here: https://en.wikipedia.org/wiki/Comma-separated_values
+
+function toCsvText(array) {
+   return array.join("\n")
+}
+
+
+//  Level: 8 Kyu
+
 //  Merge Two Sorted Arrays into One
 //  Date: 7/6
 //  Instructions: You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted 
