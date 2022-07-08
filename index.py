@@ -1,3 +1,13 @@
+#   Level: 8 Kyu
+
+#   Find Nearest Square Number
+#   Date: 7/8
+#   Instructions: Your task is to find the nearest square number, nearest_sq(n), of a positive integer n. Goodluck :)
+
+def nearest_sq(n):
+    return round(n**0.5)**2
+
+
 #  Level: 8 Kyu
 
 #  CSV Representation of Array
