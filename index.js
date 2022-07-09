@@ -1,5 +1,27 @@
 //  Level: 8 Kyu
 
+//  Playing with Cubes II
+//  Date: 7/9
+//  Instructions: Hey Codewarrior! You already implemented a Cube class, but now we need your help again! I'm talking about constructors. 
+//  We don't have one. Let's code two: One taking an integer and one handling no given arguments! Also we got a problem with negative values.
+//  Correct the code so negative values will be switched to positive ones! The constructor taking no arguments should assign 0 to Cube's Side
+//  property.
+
+class Cube { 
+  constructor(n){
+    this.setSide(n)
+  }
+  getSide(n) {
+    return this.side; 
+  }
+  setSide(n = 0) {
+    this.side = Math.abs(n);
+  }
+}
+
+
+//  Level: 8 Kyu
+
 //  Find Nearest Square Number
 //  Date: 7/8
 //  Instructions: Your task is to find the nearest square number, nearest_sq(n), of a positive integer n. Goodluck :)
