@@ -1,6 +1,26 @@
 #  Level: 8 Kyu
 
 #  Playing with Cubes II
+#  Date: 7/10
+#  Instructions: Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of
+#  sheep present in the array (true means present).
+#  For example:
+#  [True,  True,  True,  False,
+#   True,  True,  True,  True ,
+#   True,  False, True,  False,
+#   True,  False, False, True ,
+#   True,  True,  True,  True ,
+#   False, False, True,  True]
+#  The correct answer would be 17.
+#  Hint: Don't forget to check for bad values like null/undefined 
+
+def count_sheeps(sheep):
+    return sheep.count(True)
+
+
+#  Level: 8 Kyu
+
+#  Playing with Cubes II
 #  Date: 7/9
 #  Instructions: Hey Codewarrior! You already implemented a Cube class, but now we need your help again! I'm talking about constructors. 
 #  We don't have one. Let's code two: One taking an integer and one handling no given arguments! Also we got a problem with negative values.
