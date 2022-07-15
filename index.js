@@ -1,5 +1,20 @@
 //  Level: 8 Kyu
 
+//  Find The Position!
+//  Date: 7/16
+//  Instructions: When provided with a letter, return its position in the alphabet.
+//  Input: "a"
+//  Ouput: "Position of alphabet: 1"
+
+function position(letter){
+  letter = letter.toLowerCase()
+  let position = letter.charCodeAt()
+  return "Position of alphabet: " + (position - 96)
+}
+
+
+//  Level: 8 Kyu
+
 //  Is This My Tail?
 //  Date: 7/14
 //  Instructions: Some new animals have arrived at the zoo. The zoo keeper is concerned that perhaps the animals do not have the right tails. To help
