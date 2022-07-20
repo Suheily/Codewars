@@ -1,5 +1,25 @@
 #  Level: 8 Kyu
 
+#  Find Multiples of a Number
+#  Date: 7/20
+#  Instructions: In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up 
+#  to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers 
+#  passed into the function, not consisting of 0. The limit will always be higher than the base. For example, if the parameters passed are
+#  (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+def find_multiples(integer, limit):
+    multiples = []
+    original = integer
+    
+    while(integer <= limit):
+        multiples.append(integer)
+        integer += original
+    
+    return multiples
+
+
+#  Level: 8 Kyu
+
 #  Beginner Series #1 School Paperwork
 #  Date: 7/18
 #  Instructions: Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
