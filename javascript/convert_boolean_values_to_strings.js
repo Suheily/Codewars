@@ -11,3 +11,9 @@ function boolToWord( bool ){
     return "No"
   }
 }
+
+// OR 
+
+function boolToWord( bool ){
+  return bool? "Yes" : "No"
+}
